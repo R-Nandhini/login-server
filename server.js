@@ -22,7 +22,7 @@ app.use("/api",router);
 // public
 // get user
 app.get('/', (req, res) => {
-    res.send('Hello World, Lenins world ');
+    res.send('Hello World, Zylens world ');
   });
 
 app.post("/createtable", async (req, res) => {
