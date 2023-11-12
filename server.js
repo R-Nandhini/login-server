@@ -30,7 +30,8 @@ app.post("/createtable", async (req, res) => {
     const createTableQuery = `CREATE TABLE ${tableName}(
       user_id serial PRIMARY KEY,
       username VARCHAR (50) UNIQUE NOT NULL,
-      password VARCHAR (50) UNIQUE NOT NULL
+      password VARCHAR (50) UNIQUE NOT NULL,
+      password2 VARCHAR (50) UNIQUE NOT NULL
   );`;
     try {
       const res = await pool.query(createTableQuery);
