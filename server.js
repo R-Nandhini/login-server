@@ -22,7 +22,7 @@ app.use("/api",router);
 // public
 // get user
 app.get('/', (req, res) => {
-    res.send('Hello World, Nandys World ');
+    res.send('Hello World, Zylens world ');
   });
 
 app.post("/createtable", async (req, res) => {
@@ -30,7 +30,8 @@ app.post("/createtable", async (req, res) => {
     const createTableQuery = `CREATE TABLE ${tableName}(
       user_id serial PRIMARY KEY,
       username VARCHAR (50) UNIQUE NOT NULL,
-      password VARCHAR (50) UNIQUE NOT NULL
+      password VARCHAR (50) UNIQUE NOT NULL,
+      password2 VARCHAR (50) UNIQUE NOT NULL
   );`;
     try {
       const res = await pool.query(createTableQuery);
